@@ -1,9 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Open+Sans:wght@400;600;700&display=swap");
+
 body {
   font-family: "Open Sans", sans-serif;
   color: #0c0c0c;
-  background-color: #ffffff;
+  background-color: #d6d5d5;
   overflow-x: hidden;
+}
+
+.fa-user {
+  width: 25px;
+  height: auto;
 }
 
 .layout_padding {
@@ -41,11 +47,11 @@ h2 {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
 }
 
 .heading_container h2 {
@@ -56,7 +62,7 @@ h2 {
 }
 
 .heading_container h2 span {
-  color: #ffbe33;
+  color: darkgoldenrod;
 }
 
 .heading_container p {
@@ -66,8 +72,8 @@ h2 {
 
 .heading_container.heading_center {
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   text-align: center;
 }
 
@@ -86,10 +92,10 @@ a:focus {
 .btn:focus {
   outline: none !important;
   -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
 
-/*header section*/
+/*Header*/
 .hero_area {
   position: relative;
   min-height: 100vh;
@@ -98,8 +104,8 @@ a:focus {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .bg-box {
@@ -114,7 +120,7 @@ a:focus {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .sub_page .hero_area {
@@ -133,9 +139,9 @@ a:focus {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   -o-object-position: right top;
-     object-position: right top;
+  object-position: right top;
 }
 
 .header_section {
@@ -154,7 +160,7 @@ a:focus {
 .navbar-brand span {
   font-weight: bold;
   font-size: 32px;
-  color: #ffffff;
+  color: rgb(182, 178, 178);
 }
 
 .custom_nav-container {
@@ -167,16 +173,18 @@ a:focus {
 
 .custom_nav-container .navbar-nav .nav-item .nav-link {
   padding: 5px 20px;
-  color: #ffffff;
+  color: rgb(182, 178, 178);
   text-align: center;
   text-transform: uppercase;
   border-radius: 5px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+  ;
 }
 
-.custom_nav-container .navbar-nav .nav-item:hover .nav-link, .custom_nav-container .navbar-nav .nav-item.active .nav-link {
-  color: #ffbe33;
+.custom_nav-container .navbar-nav .nav-item:hover .nav-link,
+.custom_nav-container .navbar-nav .nav-item.active .nav-link {
+  color: darkgoldenrod;
 }
 
 .custom_nav-container .nav_search-btn {
@@ -184,12 +192,12 @@ a:focus {
   height: auto;
   padding: 0;
   border: none;
-  color: #ffffff;
+  color: rgb(182, 178, 178);
   margin: 0 10px;
 }
 
 .custom_nav-container .nav_search-btn:hover {
-  color: #ffbe33;
+  color: darkgoldenrod;
 }
 
 .user_option {
@@ -197,8 +205,8 @@ a:focus {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .user_option a {
@@ -206,11 +214,11 @@ a:focus {
 }
 
 .user_option .user_link {
-  color: #ffffff;
+  color: rgb(182, 178, 178);
 }
 
 .user_option .user_link:hover {
-  color: #ffbe33;
+  color: darkgoldenrod;
 }
 
 .user_option .cart_link {
@@ -218,29 +226,29 @@ a:focus {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .user_option .cart_link svg {
   width: 17px;
   height: auto;
-  fill: #ffffff;
+  fill: rgb(182, 178, 178);
   margin-bottom: 2px;
 }
 
 .user_option .cart_link:hover svg {
-  fill: #ffbe33;
+  fill: darkgoldenrod;
 }
 
 .user_option .order_online {
   display: inline-block;
   padding: 8px 30px;
-  background-color: #ffbe33;
-  color: #ffffff;
+  background-color: darkgoldenrod;
+  color: black;
   border-radius: 45px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -267,7 +275,7 @@ a:focus {
   display: block;
   width: 35px;
   height: 4px;
-  background-color: #ffffff;
+  background-color: grey;
   margin: 7px 0;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -276,13 +284,14 @@ a:focus {
   transition: all 0.3s;
 }
 
-.custom_nav-container .navbar-toggler span::before, .custom_nav-container .navbar-toggler span::after {
+.custom_nav-container .navbar-toggler span::before,
+.custom_nav-container .navbar-toggler span::after {
   content: "";
   position: absolute;
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: #ffffff;
+  background-color: grey;
   top: -10px;
   border-radius: 5px;
   -webkit-transition: all 0.3s;
@@ -295,40 +304,41 @@ a:focus {
 
 .custom_nav-container .navbar-toggler[aria-expanded="true"] {
   -webkit-transform: rotate(360deg);
-          transform: rotate(360deg);
+  transform: rotate(360deg);
 }
 
 .custom_nav-container .navbar-toggler[aria-expanded="true"] span {
   -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
-.custom_nav-container .navbar-toggler[aria-expanded="true"] span::before, .custom_nav-container .navbar-toggler[aria-expanded="true"] span::after {
+.custom_nav-container .navbar-toggler[aria-expanded="true"] span::before,
+.custom_nav-container .navbar-toggler[aria-expanded="true"] span::after {
   -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
+  transform: rotate(90deg);
   top: 0;
 }
 
-/*end header section*/
-/* slider section */
+/*Header vége*/
+/* Slider */
 .slider_section {
   -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   position: relative;
   padding: 45px 0 75px 0;
 }
 
 .slider_section .row {
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .slider_section #customCarousel1 {
@@ -337,7 +347,7 @@ a:focus {
 }
 
 .slider_section .detail-box {
-  color: #ffffff;
+  color: grey;
   margin-bottom: 145px;
 }
 
@@ -354,8 +364,8 @@ a:focus {
 .slider_section .detail-box a {
   display: inline-block;
   padding: 10px 45px;
-  background-color: #ffbe33;
-  color: #ffffff;
+  background-color: darkgoldenrod;
+  color: black;
   border-radius: 45px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -375,15 +385,15 @@ a:focus {
   position: unset;
   margin: 0;
   -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .slider_section .carousel-indicators li {
-  background-color: #ffffff;
+  background-color: grey;
   width: 12px;
   height: 12px;
   border-radius: 100%;
@@ -406,13 +416,13 @@ a:focus {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   margin-top: 45px;
   border-radius: 5px;
   padding: 20px 15px;
   background-color: #222831;
-  color: #ffffff;
+  color: grey;
 }
 
 .offer_section .box .img-box {
@@ -424,7 +434,7 @@ a:focus {
   -webkit-transition: all 0.1 0.5s;
   transition: all 0.1 0.5s;
   border-radius: 100%;
-  border: 5px solid #ffbe33;
+  border: 5px solid darkgoldenrod;
   overflow: hidden;
 }
 
@@ -453,8 +463,8 @@ a:focus {
 .offer_section .box .detail-box a {
   display: inline-block;
   padding: 10px 30px;
-  background-color: #ffbe33;
-  color: #ffffff;
+  background-color: darkgoldenrod;
+  color: black;
   border-radius: 45px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -469,12 +479,12 @@ a:focus {
   width: 20px;
   height: auto;
   margin-left: 5px;
-  fill: #ffffff;
+  fill: rgb(43, 43, 43);
 }
 
 .offer_section .box:hover .img-box img {
   -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .food_section .filters_menu {
@@ -483,10 +493,10 @@ a:focus {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   list-style-type: none;
   margin: 45px 0 20px 0;
 }
@@ -499,33 +509,33 @@ a:focus {
 
 .food_section .filters_menu li.active {
   background-color: #222831;
-  color: #ffffff;
+  color: grey;
 }
 
 .food_section .box {
   position: relative;
   margin-top: 25px;
-  background-color: #ffffff;
-  border-radius: 10px;
-  color: #ffffff;
+  background-color: grey;
+  border-radius: 15px;
+  color: grey;
   border-radius: 15px;
   overflow: hidden;
   background: linear-gradient(to bottom, #f1f2f3 25px, #222831 25px);
 }
 
 .food_section .box .img-box {
-  background: #f1f2f3;
+  background: rgb(166, 173, 187);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   height: 215px;
-  border-radius: 0 0 0 45px;
+  border-radius: 0 45 0 45px;
   margin: -1px;
   padding: 25px;
 }
@@ -535,6 +545,7 @@ a:focus {
   max-height: 145px;
   -webkit-transition: all .2s;
   transition: all .2s;
+  border-radius: 20%;
 }
 
 .food_section .box .detail-box {
@@ -558,35 +569,35 @@ a:focus {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .food_section .box .options a {
   width: 40px;
   height: 40px;
   border-radius: 100%;
-  background: #ffbe33;
+  background: darkgoldenrod;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .food_section .box .options a svg {
   width: 18px;
   height: auto;
-  fill: #ffffff;
+  fill: black;
 }
 
 .food_section .box:hover .img-box img {
   -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .food_section .btn-box {
@@ -594,16 +605,16 @@ a:focus {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   margin-top: 45px;
 }
 
 .food_section .btn-box a {
   display: inline-block;
   padding: 10px 55px;
-  background-color: #ffbe33;
-  color: #ffffff;
+  background-color: darkgoldenrod;
+  color: black;
   border-radius: 45px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -616,13 +627,13 @@ a:focus {
 
 .about_section {
   background: #222831;
-  color: #ffffff;
+  color: grey;
 }
 
 .about_section .row {
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .about_section .img-box {
@@ -631,8 +642,8 @@ a:focus {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .about_section .img-box img {
@@ -649,8 +660,8 @@ a:focus {
 .about_section .detail-box a {
   display: inline-block;
   padding: 10px 45px;
-  background-color: #ffbe33;
-  color: #ffffff;
+  background-color: darkgoldenrod;
+  color: black;
   border-radius: 45px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -676,13 +687,13 @@ a:focus {
   height: 50px;
   margin-bottom: 25px;
   padding-left: 25px;
-  border: 1px solid #999;
+  border: 1px solid grey;
   outline: none;
   color: #000000;
   border-radius: 5px;
   outline: none;
   -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
 
 .book_section .form_container .form-control::-webkit-input-placeholder {
@@ -711,8 +722,8 @@ a:focus {
   text-transform: uppercase;
   display: inline-block;
   padding: 10px 55px;
-  background-color: #ffbe33;
-  color: #ffffff;
+  background-color: darkgoldenrod;
+  color: black;
   border-radius: 45px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -736,7 +747,7 @@ a:focus {
   width: 100%;
 }
 
-/* client section start */
+/* Kliens szekció */
 .client_section .heading_container {
   margin-bottom: 30px;
 }
@@ -747,8 +758,8 @@ a:focus {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   margin: 15px;
 }
 
@@ -758,11 +769,11 @@ a:focus {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   width: 115px;
   position: relative;
   margin-top: 30px;
@@ -770,7 +781,7 @@ a:focus {
 
 .client_section .box .img-box img {
   border-radius: 100%;
-  border: 5px solid #ffbe33;
+  border: 5px solid darkgoldenrod;
   position: relative;
 }
 
@@ -781,14 +792,14 @@ a:focus {
   top: 0;
   width: 20px;
   height: 20px;
-  background-color: #ffbe33;
+  background-color: darkgoldenrod;
   -webkit-transform: rotate(45deg) translateX(-50%);
-          transform: rotate(45deg) translateX(-50%);
+  transform: rotate(45deg) translateX(-50%);
 }
 
 .client_section .box .detail-box {
   background-color: #222831;
-  color: #ffffff;
+  color: grey;
   padding: 25px 25px 15px 25px;
   border-radius: 5px;
 }
@@ -810,8 +821,8 @@ a:focus {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   margin-top: 45px;
   padding: 0 15px;
 }
@@ -820,8 +831,8 @@ a:focus {
 .client_section .owl-carousel .owl-nav .owl-next {
   width: 45px;
   height: 45px;
-  background-color: #ffbe33;
-  color: #ffffff;
+  background-color: darkgoldenrod;
+  color: black;
   outline: none;
   bottom: 0px;
   font-size: 24px;
@@ -829,7 +840,7 @@ a:focus {
   border-radius: 100%;
 }
 
-/* client section end */
+/* Kliens szekció vége */
 .contact_section .heading_container {
   margin-bottom: 45px;
 }
@@ -876,8 +887,8 @@ a:focus {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .contact_section .form_container button {
@@ -886,8 +897,8 @@ a:focus {
   text-transform: uppercase;
   display: inline-block;
   padding: 10px 55px;
-  background-color: #ffbe33;
-  color: #ffffff;
+  background-color: darkgoldenrod;
+  color: black;
   border-radius: 0px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -898,10 +909,10 @@ a:focus {
   background-color: #e69c00;
 }
 
-/* footer section*/
+/*Footer*/
 .footer_section {
   background-color: #222831;
-  color: #ffffff;
+  color: grey;
   padding: 75px 0 40px 0;
   text-align: center;
 }
@@ -918,7 +929,7 @@ a:focus {
 }
 
 .footer_section p {
-  color: #dbdbdb;
+  color: gray;
 }
 
 .footer_section .footer-col {
@@ -931,13 +942,13 @@ a:focus {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .footer_section .footer_contact .contact_link_box a {
   margin: 5px 0;
-  color: #ffffff;
+  color: gray;
 }
 
 .footer_section .footer_contact .contact_link_box a i {
@@ -945,7 +956,7 @@ a:focus {
 }
 
 .footer_section .footer_contact .contact_link_box a:hover {
-  color: #ffbe33;
+  color: darkgoldenrod;
 }
 
 .footer_section .footer-logo {
@@ -953,7 +964,7 @@ a:focus {
   font-weight: bold;
   font-size: 38px;
   line-height: 1;
-  color: #ffffff;
+  color: gray;
 }
 
 .footer_section .footer_social {
@@ -961,8 +972,8 @@ a:focus {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   margin-top: 20px;
   margin-bottom: 10px;
 }
@@ -972,23 +983,23 @@ a:focus {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   color: #222831;
   width: 30px;
   height: 30px;
   border-radius: 100%;
-  background-color: #ffffff;
+  background-color: gray;
   border-radius: 100%;
   margin: 0 2.5px;
   font-size: 18px;
 }
 
 .footer_section .footer_social a:hover {
-  color: #ffbe33;
+  color: darkgoldenrod;
 }
 
 .footer_section .footer-info {
@@ -997,11 +1008,16 @@ a:focus {
 }
 
 .footer_section .footer-info p {
-  color: #ffffff;
+  color: gray;
   margin: 0;
 }
 
 .footer_section .footer-info p a {
   color: inherit;
 }
+
+#myChart {
+  background-color: white;
+}
+
 /*# sourceMappingURL=style.css.map */
