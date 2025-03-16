@@ -1020,4 +1020,19 @@ a:focus {
   background-color: white;
 }
 
+.pontocska {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(90deg, #5e5e5e, #999999);
+  padding: 10px 15px;
+  border-radius: 5px;
+  display: inline-block;
+  text-align: center;
+  width: 100px;
+  height: 60px;
+  line-height: 50px;
+  margin-bottom: 20px;
+}
+
 /*# sourceMappingURL=style.css.map */
