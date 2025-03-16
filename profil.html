@@ -19,9 +19,12 @@
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
 
   <!--owl slider stylesheet -->
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
   <!-- nice select  -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css" integrity="sha512-CruCP+TD3yXzlvvijET8wV5WxxEh5H8P4cmz0RFbKK6FlZ2sYl3AEsKlLPHbniXKSrDdFewhbmBK5skbdsASbQ==" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css"
+    integrity="sha512-CruCP+TD3yXzlvvijET8wV5WxxEh5H8P4cmz0RFbKK6FlZ2sYl3AEsKlLPHbniXKSrDdFewhbmBK5skbdsASbQ=="
+    crossorigin="anonymous" />
   <!-- font awesome style -->
   <link href="css/font-awesome.min.css" rel="stylesheet" />
 
@@ -30,13 +33,15 @@
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
   <link rel="stylesheet" href="Login.css">
+  
+  <script src="ajax.js"></script>
 </head>
 
 <body class="sub_page">
 
   <div class="hero_area">
     <div class="bg-box">
-      <img src="hero-bg.jpg" alt="">
+      <img src="images/hero-bg.jpg" alt="">
     </div>
     <!-- header section strats -->
     <header class="header_section">
@@ -48,7 +53,8 @@
             </span>
           </a>
 
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class=""> </span>
           </button>
 
@@ -68,11 +74,13 @@
               </li>
             </ul>
             <div class="user_option">
-                <a href="profil.html" class="user_link">
+              <a href="BurgerChampLogIn.html" class="user_link">
                 <i class="fa fa-user" aria-hidden="true"></i>
               </a>
-              <a class="cart_link" href="#">
-                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029" style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
+              <a class="cart_link" href="kosar_alap.html">
+                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029"
+                  style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
                   <g>
                     <g>
                       <path d="M345.6,338.862c-29.184,0-53.248,23.552-53.248,53.248c0,29.184,23.552,53.248,53.248,53.248
@@ -135,40 +143,40 @@
   <section class="book_section layout_padding">
     <div class="container">
       <div class="Login">
-        <h2>Jelentkezzen be:</h2  >
+        <h2 style="font-size: 50px; margin-bottom: 20px;" id="felhasznalonev">Felhasználónév</h2>
         <form action="">
-              <label for="first">
-                    Felhasználónév:
-              </label>
-              <input type="text" 
-                     id="first" 
-                     name="first" 
-                     placeholder="Adja meg a Felhasználónevét" required>
-
-              <label for="password">
-                    Jelszó:
-              </label>
-              <input type="password"
-                     id="password" 
-                     name="password"
-                     placeholder="Adja meg a jelszavát" required>
-
-              <div class="wrap">
-                    <button type="submit"
-                            onclick="location.href='index.html'">
-                          Be Jelentkezzem!
-                    </button>
+          <label for="first" style="text-align: center;">
+            Hűségpontok
+          </label>
+          <h5 class="pontocska">0</h5>
+          <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <h1>Classic Burger</h1>
+                <h4>20 pont</h4>
               </div>
+              <div class="carousel-item">
+                <h1>Classic Burger2</h1>
+                <h4>40 pont</h4>
+              </div>
+              <div class="carousel-item">
+                <h1>Classic Burger3</h1>
+                <h4>60 pont</h4>
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
         </form>
-        <p>Nincs Fiókja?
-              <a href="BurgerChampReg.html"
-                 style="text-decoration: none;">
-                    Regisztráljon!
-              </a>
-        </p>
-  </div>
-        <div class="col-md-3"></div>
       </div>
+      <div class="col-md-3"></div>
+    </div>
     </div>
   </section>
   <!-- footer section -->
@@ -177,11 +185,12 @@
       <div class="row">
         <div class="col-md-4 footer-col">
           <div class="footer_contact">
-            <h4>
+            <h5>
               Kapcsolat információ
-            </h4>
+            </h5>
             <div class="contact_link_box">
-              <a href="https://www.google.com/maps/@47.9471908,22.3244408,3a,75y,300.77h,72.39t/data=!3m7!1e1!3m5!1s-CyfZ6F2Oa_wcFsEqQ1PxQ!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D17.60825397427743%26panoid%3D-CyfZ6F2Oa_wcFsEqQ1PxQ%26yaw%3D300.7652670024484!7i16384!8i8192?entry=ttu&g_ep=EgoyMDI1MDEyOS4xIKXMDSoASAFQAw%3D%3D">
+              <a
+                href="https://www.google.com/maps/@47.9471908,22.3244408,3a,75y,300.77h,72.39t/data=!3m7!1e1!3m5!1s-CyfZ6F2Oa_wcFsEqQ1PxQ!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D17.60825397427743%26panoid%3D-CyfZ6F2Oa_wcFsEqQ1PxQ%26yaw%3D300.7652670024484!7i16384!8i8192?entry=ttu&g_ep=EgoyMDI1MDEyOS4xIKXMDSoASAFQAw%3D%3D">
                 <i class="fa fa-map-marker" aria-hidden="true"></i>
                 <span>
                   Helyszín
@@ -214,7 +223,8 @@
               <a href="https://www.facebook.com/?locale=hu_HU">
                 <i class="fa fa-facebook" aria-hidden="true"></i>
               </a>
-              <a href="https://twitter.com/x/migrate?tok=7b2265223a222f3f6c616e673d6875222c2274223a313733383636303837377d99b9d8b8ab7b1f4d16c48e73281ab96f">
+              <a
+                href="https://twitter.com/x/migrate?tok=7b2265223a222f3f6c616e673d6875222c2274223a313733383636303837377d99b9d8b8ab7b1f4d16c48e73281ab96f">
                 <i class="fa fa-twitter" aria-hidden="true"></i>
               </a>
               <a href="https://www.instagram.com/">
@@ -224,14 +234,14 @@
           </div>
         </div>
         <div class="col-md-4 footer-col">
-          <h4>
+          <h5>
             Nyitva Tartás
-          </h4>
+          </h5>
           <p>
             Hétfő - Szombat
           </p>
           <p>
-            10.00  - 22.00 
+            10.00 - 22.00
           </p>
         </div>
       </div>
@@ -250,7 +260,8 @@
   <!-- jQery -->
   <script src="js/jquery-3.4.1.min.js"></script>
   <!-- popper js -->
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
   </script>
   <!-- bootstrap js -->
   <script src="js/bootstrap.js"></script>
@@ -262,12 +273,17 @@
   <!-- nice select -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
   <!-- custom js -->
-  <script src="feane/js/custom.js"></script>
+  <script src="js/custom.js"></script>
   <!-- Google Map -->
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
   </script>
   <!-- End Google Map -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
   
+  <script>
+    console.log(name());
+    document.getElementById("felhasznalonev").innerText = name();
+    </script>
 </body>
+
 </html>
