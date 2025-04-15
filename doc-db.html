@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DB API Dokumentáció</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 20px;
+        padding: 0;
+        background-color: #f9f9f9;
+        color: #333;
+      }
+      h1,
+      h2,
+      h3 {
+        color: #2c3e50;
+      }
+      code {
+        background-color: #e8e8e8;
+        padding: 2px 5px;
+        border-radius: 3px;
+        font-family: "Courier New", Courier, monospace;
+      }
+      pre {
+        background-color: #f4f4f4;
+        padding: 10px;
+        border-radius: 5px;
+        overflow-x: auto;
+      }
+      .example {
+        background-color: #fff;
+        border: 1px solid #ddd;
+        padding: 15px;
+        margin: 15px 0;
+        border-radius: 5px;
+      }
+      .note {
+        background-color: #e3f2fd;
+        padding: 10px;
+        border-left: 4px solid #2196f3;
+        margin: 15px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>DB API Dokumentáció</h1>
+    <p>
+      Ez a dokumentáció bemutatja a <code>DB</code> osztály használatát PHP-ban,
+      amely egyszerű ORM funkcionalitást biztosít adatbázis műveletekhez.
+    </p>
+
+    <h2>1. Inicializálás</h2>
+    <p>
+      Az adatbázis műveletek elvégzéséhez először inicializálni kell az
+      osztályt:
+    </p>
+    <pre><code>DB::DBInit();</code></pre>
+
+    <h2>2. Tábla kiválasztása</h2>
+    <p>Minden művelethez ki kell választani egy táblát:</p>
+    <pre><code>$db = DB::table('users');</code></pre>
+
+    <h2>3. Lekérdezés (SELECT)</h2>
+    <p>A <code>select</code> metódussal lehet lekérdezni az adatokat:</p>
+    <div class="example">
+      <pre><code>$users = DB::table('users')
+    ->select(['id', 'name', 'email'])
+    ->where('age', '>', 18)
+    ->orderBy('name', 'ASC')
+    ->limit(10)
+    ->get();</code></pre>
+    </div>
+
+    <h2>4. Feltételek hozzáadása (WHERE)</h2>
+    <p>
+      A <code>where</code> és <code>orWhere</code> metódusokkal adhatsz hozzá
+      feltételeket:
+    </p>
+    <div class="example">
+      <pre><code>$users = DB::table('users')
+    ->where('age', '>', 18)
+    ->orWhere('name', 'LIKE', '%John%')
+    ->get();</code></pre>
+    </div>
+
+    <h2>5. Rendezés (ORDER BY)</h2>
+    <p>A <code>orderBy</code> metódussal rendezheted az eredményeket:</p>
+    <pre><code>$db->orderBy('name', 'ASC')->get();</code></pre>
+
+    <h2>6. Korlátozás (LIMIT)</h2>
+    <p>A <code>limit</code> metódussal korlátozhatod az eredmények számát:</p>
+    <pre><code>$db->limit(10)->get();</code></pre>
+
+    <h2>7. Csatlakozás (JOIN)</h2>
+    <p>A <code>join</code> metódussal több táblát is összekapcsolhatsz:</p>
+    <div class="example">
+      <pre><code>$results = DB::table('users')
+    ->join('INNER', 'orders', 'users.id = orders.user_id')
+    ->select(['users.name', 'orders.total'])
+    ->get();</code></pre>
+    </div>
+
+    <h2>8. Beszúrás (INSERT)</h2>
+    <p>Az <code>insert</code> metódussal új rekordokat szúrhatsz be:</p>
+    <div class="example">
+      <pre><code>DB::table('users')->insert([
+    ['name' => 'John', 'email' => 'john@example.com'],
+    ['name' => 'Jane', 'email' => 'jane@example.com']
+]);</code></pre>
+    </div>
+
+    <h2>9. Frissítés (UPDATE)</h2>
+    <p>A <code>update</code> metódussal frissíthetsz meglévő rekordokat:</p>
+    <div class="example">
+      <pre><code>DB::table('users')
+    ->update(['name' => 'John Doe'])
+    ->where('id', '=', 1)
+    ->save();</code></pre>
+    </div>
+
+    <h2>10. Törlés (DELETE)</h2>
+    <p>A <code>remove</code> metódussal törölhetsz rekordokat:</p>
+    <div class="example">
+      <pre><code>DB::table('users')
+    ->where('id', '=', 1)
+    ->remove();</code></pre>
+    </div>
+
+    <h2>11. JSON formátum</h2>
+    <p>
+      A <code>toJson</code> metódussal az eredményeket JSON formátumban kaphatod
+      vissza:
+    </p>
+    <pre><code>$jsonResult = $db->select(['id', 'name'])->toJson()->get();</code></pre>
+
+    <h2>12. Egyéni SQL lekérdezés</h2>
+    <p>
+      Az <code>runSql</code> metódussal közvetlenül futtathatsz SQL
+      lekérdezéseket:
+    </p>
+    <pre><code>$results = DB::runSql("SELECT * FROM users WHERE age > 18");</code></pre>
+
+    <h2>13. Tömb konvertálása JSON-be</h2>
+    <p>
+      A <code>arrayToJson</code> metódussal bármilyen tömböt konvertálhatsz JSON
+      formátumba:
+    </p>
+    <pre><code>$json = DB::arrayToJson(['name' => 'John', 'age' => 25]);</code></pre>
+
+    <div class="note">
+      <p>
+        <strong>Megjegyzés:</strong> A fenti példákban a
+        <code>DB::table('users')</code> mindenhol a <code>users</code> táblára
+        vonatkozik. A tábla neve változtatható a saját igényeid szerint.
+      </p>
+    </div>
+  </body>
+</html>

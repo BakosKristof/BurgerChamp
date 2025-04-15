@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mailer API Dokumentáció</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        code {
+            background-color: #e8e8e8;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: "Courier New", Courier, monospace;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        .example {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        .note {
+            background-color: #e3f2fd;
+            padding: 10px;
+            border-left: 4px solid #2196f3;
+            margin: 15px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Mailer API Dokumentáció</h1>
+    <p>Ez a dokumentáció bemutatja a <code>Mailer</code> osztály használatát PHP-ban, amely egyszerű email küldést tesz lehetővé a PHPMailer könyvtár segítségével.</p>
+
+    <h2>1. Email küldése</h2>
+    <p>Az email küldéséhez használd a <code>Send</code> statikus metódust. A metódus három paramétert vár:</p>
+    <ul>
+        <li><code>$email</code>: A címzett email címe.</li>
+        <li><code>$subject</code>: Az email tárgya.</li>
+        <li><code>$body</code>: Az email tartalma (HTML formátumban).</li>
+    </ul>
+    <div class="example">
+        <pre><code>use Application\Mail\Mailer;
+
+$email = "pelda@example.com";
+$subject = "Teszt Email";
+$body = "&lt;h1&gt;Ez egy teszt email&lt;/h1&gt;&lt;p&gt;Hello, világ!&lt;/p&gt;";
+
+if (Mailer::Send($email, $subject, $body)) {
+    echo "Email sikeresen elküldve!";
+} else {
+    echo "Hiba történt az email küldése közben.";
+}</code></pre>
+    </div>
+
+    <h2>2. Email sablon használata</h2>
+    <p>A <code>MailTemplate</code> metódus segítségével egyszerűen létrehozhatsz HTML email sablonokat. A metódus két paramétert vár:</p>
+    <ul>
+        <li><code>$title</code>: Az email címe.</li>
+        <li><code>$message</code>: Az email tartalma.</li>
+    </ul>
+    <div class="example">
+        <pre><code>use Application\Mail\Mailer;
+
+$email = "pelda@example.com";
+$subject = "Teszt Email";
+$title = "Üdvözöljük!";
+$message = "Köszönjük, hogy regisztrált az oldalunkra.";
+
+$body = Mailer::MailTemplate($title, $message);
+
+if (Mailer::Send($email, $subject, $body)) {
+    echo "Email sikeresen elküldve!";
+} else {
+    echo "Hiba történt az email küldése közben.";
+}</code></pre>
+    </div>
+
+    <h2>3. SMTP beállítások</h2>
+    <p>Az SMTP beállításokat közvetlenül a <code>Send</code> metódusban konfigurálhatod. Az alapértelmezett beállítások:</p>
+    <ul>
+        <li><code>Host</code>: <code>mail.nethely.hu</code></li>
+        <li><code>SMTPAuth</code>: <code>true</code></li>
+        <li><code>Username</code>: Környezeti változóból (<code>getenv("EMAIL_ADDR")</code>)</li>
+        <li><code>Password</code>: Környezeti változóból (<code>getenv("EMAIL_PASSWORD")</code>)</li>
+        <li><code>SMTPSecure</code>: <code>PHPMailer::ENCRYPTION_STARTTLS</code></li>
+        <li><code>Port</code>: <code>587</code></li>
+    </ul>
+    <div class="note">
+        <p><strong>Megjegyzés:</strong> Az SMTP beállításokat a saját szerver konfigurációjának megfelelően módosítsd.</p>
+    </div>
+
+    <h2>4. Hibakezelés</h2>
+    <p>Ha hiba történik az email küldése során, a <code>Send</code> metódus <code>false</code> értékkel tér vissza, és a hibaüzenet megjelenik a képernyőn.</p>
+    <div class="example">
+        <pre><code>try {
+    Mailer::Send($email, $subject, $body);
+} catch (Exception $e) {
+    echo "Hiba történt: " . $e->getMessage();
+}</code></pre>
+    </div>
+
+    <h2>5. Példa: Teljes workflow</h2>
+    <p>Az alábbi példa bemutatja, hogyan lehet egy emailt küldeni sablonnal:</p>
+    <div class="example">
+        <pre><code>use Application\Mail\Mailer;
+
+$email = "pelda@example.com";
+$subject = "Regisztráció megerősítése";
+$title = "Köszönjük a regisztrációt!";
+$message = "Kérjük, erősítse meg regisztrációját a következő linkre kattintva: &lt;a href='#'&gt;Megerősítés&lt;/a&gt;";
+
+$body = Mailer::MailTemplate($title, $message);
+
+if (Mailer::Send($email, $subject, $body)) {
+    echo "Email sikeresen elküldve!";
+} else {
+    echo "Hiba történt az email küldése közben.";
+}</code></pre>
+    </div>
+
+    <div class="note">
+        <p><strong>Fontos:</strong> Az email küldéséhez szükséges, hogy a PHPMailer könyvtár telepítve legyen a projektben. Használd a <code>composer</code>-t a telepítéshez:</p>
+        <pre><code>composer require phpmailer/phpmailer</code></pre>
+    </div>
+
+</body>
+</html
