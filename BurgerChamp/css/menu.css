@@ -1,0 +1,32 @@
+.menu_img{
+  height: 15rem;
+  width: auto;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.menu-item .add-to-cart{
+  background-color: orange;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  padding: 7px;
+  padding-left: 9px;
+}
+.menu-item .add-to-cart:hover {
+  background-color: #f09409;
+  transform: scale(1.1);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+  border: 1px solid #e78310;
+  cursor: pointer;
+  opacity: 1;
+}
+.menu-item .add-to-cart:active{
+  background-color: #f09409;
+  box-shadow: 0 6px 10px rgba(157, 158, 158, 0.2);
+  transform: translateY(4px);
+}
+section{background-color: #d6d5d5;}
+
+div a{text-decoration: none;}
+
